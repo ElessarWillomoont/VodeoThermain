@@ -21,4 +21,4 @@ function colorMatch(c1, c2, treshold = 180)
 
 of the utill.js, based on the object selected and light condion, the program most likely to work.
 
-The pointer object in this code is a green marker, so if the user use something also green, then don't need to care about rgb.py or requirements.txt, they could just open the index.html and adjust the "function colorMatch(c1, c2, treshold = 180)" based on their situation.
+The pointer object in this code is a green marker, so if the user use something similar, then don't need to care about rgb.py or requirements.txt, they could just open the index.html and adjust the theshold based on their situation.
