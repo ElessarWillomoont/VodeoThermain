@@ -1,0 +1,10 @@
+#myCanvas {
+    width: 100%;
+    transform: scaleX(-1); /* 水平翻转画布 */
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    overflow: hidden;
+}

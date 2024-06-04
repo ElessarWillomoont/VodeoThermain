@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>My Video Thermain</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>  
+<body>
+    <canvas id="myCanvas"></canvas>
+    <script>
+        const myCanvas = document.getElementById("myCanvas");
+        const myVideo = document.createElement("video");
+        
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function(rawData){
+                myVideo.srcObject = rawData;
+                myVideo.play();
+                myVideo.onloadeddata = function(){
+                    myCanvas.width = myVideo.videoWidth;
+                    myCanvas.height = myVideo.videoHeight;
+                    new Effect(myCanvas, myVideo);
+                };
+            })
+            .catch(function(err){ alert(err); });
+    </script>
+    <script src="effect.js"></script>
+    <script src="utill.js"></script>
+</body>
+</html>
